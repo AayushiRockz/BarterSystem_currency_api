@@ -37,7 +37,13 @@ const styles = StyleSheet.create({
         alignItems:'center',
         borderRadius:50,
         marginTop:350,
-        padding:10
+        padding:10,
+        shadowColor:'grey' ,
+        shadowOffset:{width:2,height:5} ,   
+       shadowOpacity:4,
+       shadowRadius:20,
+       borderRadius:30,
+        
 
     },
     buttonText:{

@@ -52,11 +52,19 @@ export default class ExchangeScreen extends React.Component{
         return(
             
             <View style={styles.container}>
+                <AppHeader/>
                <Text
                style={{backgroundColor:'#DC5874',
                         color:'#fff',
                         fontFamily:'serif',
-                        fontSize:30
+                        fontSize:30,
+                        shadowColor:'#771021' ,
+                        shadowOffset:{width:2,height:10} ,   
+                       shadowOpacity:6,
+                       shadowRadius:30,
+                       padding:20
+                      
+                
                        }}
                >Exchange</Text>
                
@@ -103,24 +111,37 @@ const styles = StyleSheet.create({
         backgroundColor:'pink',
         justifyContent:'space-evenly',
         alignContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        
     },
 
     inputs:{
         width:'50%',
-        height:'30%',
+        height:'10%',
         borderWidth:2,
         borderRadius:40,
         color:'white',
-        backgroundColor:'black'
+        backgroundColor:'black',
+        padding:10,
+        shadowColor:'#771021' ,
+        shadowOffset:{width:2,height:10} ,   
+       shadowOpacity:6,
+       shadowRadius:30,
+       borderRadius:30,
 
     },
     button:{
-        backgroundColor:'pink',
+        backgroundColor:'#DC5874',
         borderWidth:2,
         borderRadius:50,
-        width:'60%',
-        height:'30%',
-        alignItems:'center'
+        width:'40%',
+        height:'10%',
+        alignItems:'center',
+        padding:10,
+        shadowColor:'#771021' ,
+        shadowOffset:{width:2,height:10} ,   
+       shadowOpacity:6,
+       shadowRadius:30,
+       borderRadius:30,
     }
 })

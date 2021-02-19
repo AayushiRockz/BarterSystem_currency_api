@@ -214,7 +214,10 @@ const styles = StyleSheet.create({
     heading:{fontSize:25,
             fontWeight:'300',
           fontFamily:'serif',
-        color:'#302515'},
+        color:'#302515',
+        
+
+        },
     screenButton:{
         backgroundColor:'#DC5874',
         borderWidth:2,
@@ -223,7 +226,12 @@ const styles = StyleSheet.create({
         height:70,
         margin:20,
         padding:20,
-        borderColor:'#B51759'
+        borderColor:'#B51759',
+        shadowColor:'black' ,
+        shadowOffset:{width:2,height:10} ,   
+       shadowOpacity:6,
+       shadowRadius:30,
+       borderRadius:30,
     },
     screenButtonText:{
         fontSize:15,
@@ -273,7 +281,12 @@ const styles = StyleSheet.create({
         backgroundColor:'#B51759',
         alignSelf:'center',
         margin:5,
-        borderRadius:20
+        borderRadius:20,
+        shadowColor:'#771021' ,
+        shadowOffset:{width:2,height:10} ,   
+       shadowOpacity:3,
+       shadowRadius:30,
+       borderRadius:30,
     },
     modalButtonText:{
         fontFamily:13,
