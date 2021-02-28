@@ -22,11 +22,8 @@ const styles = StyleSheet.create({
        backgroundColor:'#fff',
        borderRadius:20,
        padding:10,
-       margin:10
+       margin:10,
+      
         
-    },
-    Tagline:{
-        fontFamily:'serif',
-        alignSelf:'flex-end'
     }
 })

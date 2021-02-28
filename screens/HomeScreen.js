@@ -71,9 +71,9 @@ componentWillUnmount(){
             )
             :(
               <FlatList
-               style={styles.list}
+              data={this.state.requestedThingsList}
                 keyExtractor={(item, index) => index.toString()}
-                data={this.state.requestedThingsList}
+                
                 renderItem={( {item, i} ) =>{
    
                   return (
@@ -81,13 +81,16 @@ componentWillUnmount(){
                       key={i}
                       title={item.item_name}
                       subtitle={item.description}
-                      titleStyle={{ color: 'black', fontWeight: 'bold', fontSize:20 }}
+                      style={styles.list }
+                      
+                     
                       rightElement={
                           <TouchableOpacity style={styles.button}>
-                            <Text style={{color:'#ffff', fontSize:20}}>Exchange</Text>
+                            <Text style={{color:'black', fontSize:20}}>Exchange</Text>
                           </TouchableOpacity>
                         }
-                      bottomDivider
+                        titleStyle={styles.listText}
+                    
                     />
                   )
                 }}
@@ -118,5 +121,10 @@ const styles = StyleSheet.create({
       backgroundColor:'pink',
       width:100,
       height:50
+    },
+    listText:{
+      color:'black',
+      fontWeight:'bold',
+      fontSize:20
     }
 })
