@@ -11,6 +11,7 @@ import SettingsScreen from './screens/SettingsScreen';
 import CustomSideBarMenu from './components/CustomSideBarMenu';
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import {createDrawerNavigator} from 'react-navigation-drawer';
+import NotificationScreen from './screens/NotificationScreen';
 import {createStackNavigator} from 'react-navigation-stack';
 
 export default class App extends Component {
@@ -64,6 +65,9 @@ export const AppDrawerNavigator = createDrawerNavigator({
   },
  MyBarters:{
     screen: MyBarterScreen
+  },
+  Notification:{
+    screen: NotificationScreen
   },
 },
 {

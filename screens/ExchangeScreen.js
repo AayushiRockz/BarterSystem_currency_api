@@ -3,6 +3,7 @@ import {View, Text, TextInput, TouchableOpacity, Alert, StyleSheet} from 'react-
 import db from '../config';
 import firebase from 'firebase'; 
 import { KeyboardAvoidingView } from 'react-native';
+import {Icon} from 'react-native-elements';
 import MyHeader from '../components/MyHeader';
 import AppHeader from '../components/AppHeader';
 
@@ -52,7 +53,13 @@ export default class ExchangeScreen extends React.Component{
         return(
             
             <View style={styles.container}>
-                <AppHeader/>
+               
+               <Icon name='bell' type='font-awesome' color='#e42f68' size={25}
+          onPress={() =>this.props.navigation.navigate('Notification')}/>
+                      <AppHeader/> 
+
+              
+
                <Text
                style={{backgroundColor:'#DC5874',
                         color:'#fff',

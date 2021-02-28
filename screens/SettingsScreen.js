@@ -59,6 +59,9 @@ export default class SettingsScreen extends Component{
     render(){
         return(
             <View style={styles.container}>
+                    
+               <Icon name='bell' type='font-awesome' color='#e42f68' size={25}
+          onPress={() =>this.props.navigation.navigate('Notification')}/>
                 <AppHeader/>
                 <Text  style={{backgroundColor:'#DC5874',
                         color:'#fff',

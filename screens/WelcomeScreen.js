@@ -174,7 +174,13 @@ export default class WelcomeScreen extends Component{
     render(){
 return(
  <View style={styles.screenContainer}>
-     <AppHeader/>
+    <Text style={{        fontSize:40,
+        fontFamily:'serif',
+        borderWidth:3,
+       backgroundColor:'#fff',
+       borderRadius:20,
+       padding:10,
+       margin:10,}}>Barter System</Text>
      <Text style={styles.heading}>Welcome!</Text>
 
      <View>

@@ -46,6 +46,9 @@ componentWillUnmount(){
   render(){
     return(
       <View style={{flex:1}}>
+            
+            <Icon name='bell' type='font-awesome' color='#e42f68' size={25}
+          onPress={() =>this.props.navigation.navigate('Notification')}/>
         <AppHeader/>
          <Text
                style={{backgroundColor:'#DC5874',

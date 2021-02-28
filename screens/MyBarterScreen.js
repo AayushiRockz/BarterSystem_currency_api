@@ -51,6 +51,9 @@ export default class MyBarterScreen extends React.Component{
     render(){
         return(
             <View>
+                    
+               <Icon name='bell' type='font-awesome' color='#e42f68' size={25}
+          onPress={() =>this.props.navigation.navigate('Notification')}/>
                 <Text style={{fontSize:25,
                     backgroundColor:'#fff', 
                     borderColor:'black',
