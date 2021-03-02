@@ -3,6 +3,7 @@ import {View, Text, TouchableOpacity,  FlatList, StyleSheet} from 'react-native'
 import {ListItem} from 'react-native-elements';
 import db from '../config';
 import AppHeader from '../components/AppHeader';
+import MyHeader from '../components/MyHeader';
 import firebase from 'firebase'; 
 
 export default class HomeScreen extends Component{
@@ -27,6 +28,10 @@ export default class HomeScreen extends Component{
     })
   }
 
+
+  getIsExchangeRequestActive(){
+    
+  }
   
   componentDidMount(){
     this.getRequestedThingsList();
@@ -47,9 +52,9 @@ componentWillUnmount(){
     return(
       <View style={{flex:1}}>
             
-            <Icon name='bell' type='font-awesome' color='#e42f68' size={25}
-          onPress={() =>this.props.navigation.navigate('Notification')}/>
+         
         <AppHeader/>
+        <MyHeader title ="Home"/>
          <Text
                style={{backgroundColor:'#DC5874',
                         color:'#fff',

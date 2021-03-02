@@ -7,8 +7,7 @@ export default class AppHeader extends React.Component {
     render(){
         return(
             <View style={styles.container}>
-           <Icon name='bars' type='font-awesome' color='#e579a6' size={30} containerStyle={{alignItems:'flex-start'}} 
-            onPress={() => this.props.navigation.toggleDrawer()}/>       
+             
                 <Text style={styles.AppHeader}>Barter System </Text>
                 
             </View>

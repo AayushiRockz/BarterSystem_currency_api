@@ -54,26 +54,12 @@ export default class ExchangeScreen extends React.Component{
             
             <View style={styles.container}>
                
-               <Icon name='bell' type='font-awesome' color='#e42f68' size={25}
-          onPress={() =>this.props.navigation.navigate('Notification')}/>
+              
                       <AppHeader/> 
 
-              
+                      <MyHeader title="Exchange "/>
 
-               <Text
-               style={{backgroundColor:'#DC5874',
-                        color:'#fff',
-                        fontFamily:'serif',
-                        fontSize:30,
-                        shadowColor:'#771021' ,
-                        shadowOffset:{width:2,height:10} ,   
-                       shadowOpacity:6,
-                       shadowRadius:30,
-                       padding:20
-                      
-                
-                       }}
-               >Exchange</Text>
+              
                
                 <TextInput placeholder="Item"
                 style={styles.inputs}
@@ -135,6 +121,7 @@ const styles = StyleSheet.create({
        shadowOpacity:6,
        shadowRadius:30,
        borderRadius:30,
+       margin:30
 
     },
     button:{

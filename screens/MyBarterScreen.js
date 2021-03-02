@@ -4,6 +4,8 @@ import {Icon,Card, ListItem} from 'react-native-elements';
 import db from '../config';
 import firebase from 'firebase';
 
+import MyHeader from '../components/MyHeader';
+
 export default class MyBarterScreen extends React.Component{
     constructor(){
         super();
@@ -45,6 +47,7 @@ export default class MyBarterScreen extends React.Component{
         <ListItem
             key={i}
             title={item.item_name}
+
             
         />
     }
@@ -52,17 +55,7 @@ export default class MyBarterScreen extends React.Component{
         return(
             <View>
                     
-               <Icon name='bell' type='font-awesome' color='#e42f68' size={25}
-          onPress={() =>this.props.navigation.navigate('Notification')}/>
-                <Text style={{fontSize:25,
-                    backgroundColor:'#fff', 
-                    borderColor:'black',
-                    borderWidth:2,
-                    borderRadius:30,
-                    alignSelf:'center',
-                    padding:10}}>
-                    My Barters
-                </Text>
+              <MyHeader title="My Barters"/>
 
                 <View >
              {this.state.allBarters===0 ?

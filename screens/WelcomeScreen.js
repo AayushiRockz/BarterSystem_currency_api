@@ -22,7 +22,6 @@ export default class WelcomeScreen extends Component{
             firstName:'',
             lastName:'',
             address:'',
-            address:'',
             contact:'',
             confirmPassword:'',
             isModalVisible:'false'

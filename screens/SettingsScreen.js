@@ -3,6 +3,7 @@ import {View, Text, TextInput, TouchableOpacity,  Alert, StyleSheet} from 'react
 import firebase from 'firebase';
 import db from '../config';
 import AppHeader from '../components/AppHeader';
+import MyHeader from '../components/MyHeader';
 
 
 export default class SettingsScreen extends Component{
@@ -60,9 +61,9 @@ export default class SettingsScreen extends Component{
         return(
             <View style={styles.container}>
                     
-               <Icon name='bell' type='font-awesome' color='#e42f68' size={25}
-          onPress={() =>this.props.navigation.navigate('Notification')}/>
+          
                 <AppHeader/>
+                <MyHeader title= "Settings"/>
                 <Text  style={{backgroundColor:'#DC5874',
                         color:'#fff',
                         fontFamily:'serif',
