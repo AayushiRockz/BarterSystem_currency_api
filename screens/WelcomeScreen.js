@@ -24,7 +24,8 @@ export default class WelcomeScreen extends Component{
             address:'',
             contact:'',
             confirmPassword:'',
-            isModalVisible:'false'
+            isModalVisible:'false',
+            currencyCode:""
         }
     }
 
@@ -40,7 +41,8 @@ export default class WelcomeScreen extends Component{
                      last_name:this.state.lastName,
                      contact:this.state.contact,
                      email_id:this.state.emailId,
-                     address:this.state.address
+                     address:this.state.address,
+                     currency_code:this.state.currencyCode
                 })
             
        return  Alert.alert(
@@ -64,7 +66,7 @@ export default class WelcomeScreen extends Component{
         firebase.auth().signInWithEmailAndPassword(emailId, password)
         .then(()=>{
             this.props.navigation.navigate('Exchange')
-           
+           console.log("User logged in");
         })
         .catch((error)=>{
             var errorCode = error.code;
@@ -144,6 +146,10 @@ export default class WelcomeScreen extends Component{
                                  })
                              }}/>
 
+                            <TextInput placeholder={"Currancy Code"}
+                             style={styles.modalInputs}
+                             onChangeText={(text)=>{this.setState({currencyCode:text})}}
+                             / >
                              <View>
                              <TouchableOpacity style={styles.modalButton} onPress={()=>{this.setState({"isModalVisible":false})}} >
                                      <Text style={styles.modalButtonText}>Cancel</Text>

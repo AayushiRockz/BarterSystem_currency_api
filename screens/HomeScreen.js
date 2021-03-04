@@ -70,7 +70,7 @@ componentWillUnmount(){
                        }}
                >Home</Text>
        
-        <View style={{flex:1}}>
+      
           {
             this.state.requestedThingsList.length === 0
             ?(
@@ -80,6 +80,7 @@ componentWillUnmount(){
             )
             :(
               <FlatList
+              style={{flex:1}}
               data={this.state.requestedThingsList}
                 keyExtractor={(item, index) => index.toString()}
                 
@@ -106,7 +107,7 @@ componentWillUnmount(){
               />
             )
           }
-        </View>
+       
       </View>
     )
   }

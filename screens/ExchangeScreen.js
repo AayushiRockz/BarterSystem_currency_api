@@ -6,6 +6,7 @@ import { KeyboardAvoidingView } from 'react-native';
 import {Icon} from 'react-native-elements';
 import MyHeader from '../components/MyHeader';
 import AppHeader from '../components/AppHeader';
+import { Value } from 'react-native-reanimated';
 
 
 export default class ExchangeScreen extends React.Component{
@@ -14,13 +15,11 @@ export default class ExchangeScreen extends React.Component{
         this.state={
             userName :  firebase.auth().currentUser.email,
             itemName:'',
-            description:''
+            description:'',
+            value:''
         }
     }
 
-    
-  
-  
     createUniqueId(){
         return Math.random().toString(36).substring(7);
       }
@@ -31,11 +30,13 @@ export default class ExchangeScreen extends React.Component{
             "user_name": userName,
             "item_name":itemName,
               "request_id"  : randomRequestId,
-            "description":description
+            "description":description,
+            "value":value
         })
         this.setState({
             itemName:'',
-            description:''
+            description:'',
+            value:''
         })
 
         return Alert.alert(
@@ -47,6 +48,19 @@ export default class ExchangeScreen extends React.Component{
                 }}
             ]
         );
+    }
+
+    getData(){
+        fetch("http://data.fixer.io/api/latest?access_key=5b86ea3c9998b7bf9dc25240dceb76cb&format=1")
+        .then(response=>{
+            return response.json();
+        }).then(responseData=>{
+            var currencyCode = this.state.currencyCode
+            var currency = responseData.rates.INR
+            var value = 69/currency
+            console.log(value);
+
+        })
     }
 
     render(){
@@ -81,6 +95,17 @@ export default class ExchangeScreen extends React.Component{
                     })
                 }}
                 value={this.state.description} 
+                />
+
+                <TextInput
+                style={styles.inputs}
+                placeholder="value" 
+                 onChangeText={(text)=>{
+                    this.setState({
+                        value:text
+                    })
+                }}
+                value={this.state.value} 
                 />
 
                 <TouchableOpacity
