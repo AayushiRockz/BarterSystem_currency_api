@@ -62,6 +62,9 @@ export default class ExchangeScreen extends React.Component{
 
         })
     }
+componentDidMount(){
+this.getData();
+}
 
     render(){
         return(
